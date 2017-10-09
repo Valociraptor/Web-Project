@@ -1,0 +1,116 @@
+body{
+    background-image: url(https://i.imgur.com/aFfdljx.jpg);
+    font-size:100%;
+    color: #af4dec;
+    font-family: "helvetica neue", arial, verdana, sans-serif;
+}
+h1{
+    color:#a8264d;
+    font-size:300%;
+    background-color:#424246;
+    border:5px solid black; 
+    border-radius:3px;
+    text-align: center;
+    width: 85%;
+    margin: 40px auto;
+    padding: 10px;
+}
+h2{
+    color:#a8264d;
+    font-size:245%;
+    background-color:#424246;
+    border:4px solid black;
+    border-radius:3px; 
+    text-align: center;
+    margin: 5px auto;  
+    width: 75%;
+}
+h3{
+    color:#a8264d;
+    font-size:190%;
+    background-color:#424246;
+    border:3px solid black;
+    border-radius:3px; 
+    text-align: center;
+    margin: 1px auto;
+    width: 65%;
+}
+p{
+    font-size:100%;
+    color: #af4dec;
+    background-color:#424246;
+    border:2px solid black;
+    border-radius:2px; 
+    margin: 5px auto;
+    padding: 8px;
+}
+a{
+    font-size:100%;
+    color: #af4dec;
+    background-color:#424246;
+    text-align: center;
+    margin: 5px auto;
+    border:3px solid black;
+    border-radius:3px; 
+    padding: 3px;
+    display: block;
+    width: 50%;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border:5px solid black; 
+    border-radius:5px;
+}
+#important{
+    font-size:200%;
+    background-color:#424246;
+    border:2px solid black;
+    border-radius:3px; 
+    text-align: center;
+    margin: 5px auto;
+    padding: 8px;
+}
+#navigation{
+    font-size:100%;
+    color: #af4dec;
+    background-color:#424246;
+    border:2px solid black;
+    border-radius:2px; 
+    width: 15%;
+    margin: 5px auto;
+    padding: 8px;
+    float: left;
+}
+#everything{
+    float: right;
+    width: 80%;
+}
+.info{
+    font-size:100%;
+    color: #af4dec;
+    background-color:#424246;
+    border:2px solid black;
+    border-radius:2px; 
+    margin: 5px auto;
+    padding: 8px;
+}
+.othercentered{
+    font-size:100%;
+    color: #af4dec;
+    background-color:#424246;
+    border:2px solid black;
+    border-radius:2px; 
+    text-align: center;
+    margin: 5px auto;
+    padding: 8px;
+    width: 65%;
+}
+
+
+
+
+
+
+
