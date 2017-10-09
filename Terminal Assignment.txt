@@ -1,0 +1,259 @@
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\Valociraptor>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor
+
+10/07/2017  09:28 AM    <DIR>          .
+10/07/2017  09:28 AM    <DIR>          ..
+05/22/2017  07:26 PM    <DIR>          .EVE
+11/21/2016  12:06 PM    <DIR>          .Origin
+11/21/2016  12:06 PM    <DIR>          .QtWebEngineProcess
+10/07/2017  09:28 AM    <DIR>          .vscode
+02/14/2013  01:35 AM    <DIR>          AppData
+09/17/2013  10:54 PM    <DIR>          Contacts
+10/07/2017  10:11 AM    <DIR>          Desktop
+05/22/2017  07:31 PM    <DIR>          Documents
+10/07/2017  08:54 AM    <DIR>          Downloads
+09/17/2013  10:54 PM    <DIR>          Favorites
+04/20/2014  11:46 PM    <DIR>          Links
+08/29/2014  07:49 PM    <DIR>          Music
+10/07/2017  02:48 PM         3,145,728 NTUSER.DAT
+03/17/2017  11:18 AM         3,145,728 ntuser.dat.rmbak
+01/08/2017  10:22 PM    <DIR>          Pictures
+06/20/2014  12:37 PM    <DIR>          Podcasts
+08/16/2014  06:34 PM    <DIR>          Saved Games
+09/17/2013  10:54 PM    <DIR>          Searches
+01/25/2017  09:04 PM                 0 Sti_Trace.log
+03/10/2015  09:52 PM    <DIR>          Tracing
+03/22/2017  07:58 PM    <DIR>          Videos
+               3 File(s)      6,291,456 bytes
+              20 Dir(s)  139,621,498,880 bytes free
+
+C:\Users\Valociraptor>cd desktop
+
+C:\Users\Valociraptor\Desktop>md DojoAssignments
+
+C:\Users\Valociraptor\Desktop>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor\Desktop
+
+10/07/2017  02:48 PM    <DIR>          .
+10/07/2017  02:48 PM    <DIR>          ..
+09/01/2017  09:46 PM    <DIR>          Boots
+10/07/2017  02:47 PM    <DIR>          Coding Stuff
+01/19/2017  11:52 AM             2,205 Discord.lnk
+10/07/2017  02:48 PM    <DIR>          DojoAssignments
+02/14/2013  03:53 AM               927 Downloads.lnk
+09/16/2017  01:37 AM    <DIR>          Dropbox
+03/23/2017  09:58 PM    <DIR>          Fresh Faces
+09/15/2017  09:27 PM    <DIR>          Games
+12/01/2013  07:44 PM    <DIR>          Installs
+10/06/2017  09:31 PM               219 Left 4 Dead 2.url
+09/15/2017  08:51 PM    <DIR>          Maintenence
+03/20/2016  10:21 PM    <DIR>          Music
+12/16/2013  03:51 PM             1,304 Notepad.lnk
+07/03/2017  09:50 PM    <DIR>          Pictures
+11/27/2016  12:30 AM    <DIR>          Plex VPN Access Scripts
+02/28/2013  06:15 PM               146 Sound - Shortcut.lnk
+06/24/2015  06:56 PM             1,846 Spotify.lnk
+09/16/2017  01:39 AM    <DIR>          Text Stuff
+11/27/2016  12:49 AM             1,822 Torrent Downloads.lnk
+10/04/2015  01:45 PM    <DIR>          USB dump
+02/22/2017  10:30 PM    <DIR>          Wallpaper
+               7 File(s)          8,469 bytes
+              16 Dir(s)  139,620,978,688 bytes free
+
+C:\Users\Valociraptor\Desktop>cd Dojo~
+The system cannot find the path specified.
+
+C:\Users\Valociraptor\Desktop>cd DojoAssignments
+
+C:\Users\Valociraptor\Desktop\DojoAssignments>md WebFundamentals
+
+C:\Users\Valociraptor\Desktop\DojoAssignments>md Python
+
+C:\Users\Valociraptor\Desktop\DojoAssignments>md MEAN
+
+C:\Users\Valociraptor\Desktop\DojoAssignments>md Ruby
+
+C:\Users\Valociraptor\Desktop\DojoAssignments>md iOS
+
+C:\Users\Valociraptor\Desktop\DojoAssignments>md netCore
+
+C:\Users\Valociraptor\Desktop\DojoAssignments>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor\Desktop\DojoAssignments
+
+10/07/2017  02:50 PM    <DIR>          .
+10/07/2017  02:50 PM    <DIR>          ..
+10/07/2017  02:50 PM    <DIR>          iOS
+10/07/2017  02:50 PM    <DIR>          MEAN
+10/07/2017  02:50 PM    <DIR>          netCore
+10/07/2017  02:50 PM    <DIR>          Python
+10/07/2017  02:50 PM    <DIR>          Ruby
+10/07/2017  02:49 PM    <DIR>          WebFundamentals
+               0 File(s)              0 bytes
+               8 Dir(s)  139,620,982,784 bytes free
+
+C:\Users\Valociraptor\Desktop\DojoAssignments>cd WebFundamentals
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals>copy nul about.txt
+
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals>cd ..
+
+C:\Users\Valociraptor\Desktop\DojoAssignments>cd Python
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\Python>copy nul about.txt
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\Python>cd ..
+
+C:\Users\Valociraptor\Desktop\DojoAssignments>cd MEAN
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\MEAN>copy nul about.txt
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\MEAN>cd ..
+
+C:\Users\Valociraptor\Desktop\DojoAssignments>cd Ruby
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\Ruby>copy nul about.txt
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\Ruby>cd ..
+
+C:\Users\Valociraptor\Desktop\DojoAssignments>cd iOS
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\iOS>copy nul about.txt
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\iOS>cd ..
+
+C:\Users\Valociraptor\Desktop\DojoAssignments>cd netCore
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\netCore>copy nul about.txt
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\netCore>cd ..
+
+C:\Users\Valociraptor\Desktop\DojoAssignments>cd WebFundamentals
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals>md Git
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals>DIR
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals
+
+10/07/2017  02:53 PM    <DIR>          .
+10/07/2017  02:53 PM    <DIR>          ..
+10/07/2017  02:51 PM                 0 about.txt
+10/07/2017  02:53 PM    <DIR>          Git
+               1 File(s)              0 bytes
+               3 Dir(s)  139,620,962,304 bytes free
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals>md HTML
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals>md CSS
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals>md Javascript
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals>DIR
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals
+
+10/07/2017  02:53 PM    <DIR>          .
+10/07/2017  02:53 PM    <DIR>          ..
+10/07/2017  02:51 PM                 0 about.txt
+10/07/2017  02:53 PM    <DIR>          CSS
+10/07/2017  02:53 PM    <DIR>          Git
+10/07/2017  02:53 PM    <DIR>          HTML
+10/07/2017  02:53 PM    <DIR>          Javascript
+               1 File(s)              0 bytes
+               6 Dir(s)  139,620,958,208 bytes free
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals>cd Git
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\Git>copy nul about
+.txt
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\Git>cd ..
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals>cd HTML
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\HTML>copy nul abou
+t.txt
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\HTML>cd ..
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals>cd CSS
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\CSS>copy nul about
+.txt
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\CSS>cd ..
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals>md Javascript
+A subdirectory or file Javascript already exists.
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals>cd Javascript
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\Javascript>copy nu
+l about.txt
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\Javascript>cd ..
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals>cd HTML
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\HTML>copy nul inde
+ntation.html
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\HTML>cd ..
+
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals>cd ..
+
+C:\Users\Valociraptor\Desktop\DojoAssignments>dir /b /s
+C:\Users\Valociraptor\Desktop\DojoAssignments\iOS
+C:\Users\Valociraptor\Desktop\DojoAssignments\MEAN
+C:\Users\Valociraptor\Desktop\DojoAssignments\netCore
+C:\Users\Valociraptor\Desktop\DojoAssignments\Python
+C:\Users\Valociraptor\Desktop\DojoAssignments\Ruby
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals
+C:\Users\Valociraptor\Desktop\DojoAssignments\iOS\about.txt
+C:\Users\Valociraptor\Desktop\DojoAssignments\MEAN\about.txt
+C:\Users\Valociraptor\Desktop\DojoAssignments\netCore\about.txt
+C:\Users\Valociraptor\Desktop\DojoAssignments\Python\about.txt
+C:\Users\Valociraptor\Desktop\DojoAssignments\Ruby\about.txt
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\about.txt
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\CSS
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\Git
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\HTML
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\Javascript
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\CSS\about.txt
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\Git\about.txt
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\HTML\about.txt
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\HTML\indentation.h
+tml
+C:\Users\Valociraptor\Desktop\DojoAssignments\WebFundamentals\Javascript\about.t
+xt
+
+C:\Users\Valociraptor\Desktop\DojoAssignments>
+C:\Users\Valociraptor\Desktop\DojoAssignments>

@@ -1,0 +1,300 @@
+ Directory of C:\Users\Valociraptor\Desktop\Coding Stuff
+
+10/07/2017  02:26 PM    <DIR>          .
+10/07/2017  02:26 PM    <DIR>          ..
+10/07/2017  02:26 PM    <DIR>          folder
+10/07/2017  01:11 PM             2,175 HTML Exercise Form.html
+10/07/2017  10:11 AM               861 HTML Exercise Indentation.html
+10/07/2017  01:54 PM             7,101 Pigeons.html
+10/07/2017  02:26 PM    <DIR>          testy
+               3 File(s)         10,137 bytes
+               4 Dir(s)  139,378,315,264 bytes free
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>cd testy
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\testy>rd testy
+The system cannot find the file specified.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\testy>c ..
+'c' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\testy>cd ..
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>rd testy
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>copy nul filey
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor\Desktop\Coding Stuff
+
+10/07/2017  02:28 PM    <DIR>          .
+10/07/2017  02:28 PM    <DIR>          ..
+10/07/2017  02:28 PM                 0 filey
+10/07/2017  02:26 PM    <DIR>          folder
+10/07/2017  01:11 PM             2,175 HTML Exercise Form.html
+10/07/2017  10:11 AM               861 HTML Exercise Indentation.html
+10/07/2017  01:54 PM             7,101 Pigeons.html
+               4 File(s)         10,137 bytes
+               3 Dir(s)  139,377,258,496 bytes free
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>copy filey filey2
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor\Desktop\Coding Stuff
+
+10/07/2017  02:28 PM    <DIR>          .
+10/07/2017  02:28 PM    <DIR>          ..
+10/07/2017  02:28 PM                 0 filey
+10/07/2017  02:28 PM                 0 filey2
+10/07/2017  02:26 PM    <DIR>          folder
+10/07/2017  01:11 PM             2,175 HTML Exercise Form.html
+10/07/2017  10:11 AM               861 HTML Exercise Indentation.html
+10/07/2017  01:54 PM             7,101 Pigeons.html
+               5 File(s)         10,137 bytes
+               3 Dir(s)  139,377,258,496 bytes free
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>copy nul filey3.html
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor\Desktop\Coding Stuff
+
+10/07/2017  02:28 PM    <DIR>          .
+10/07/2017  02:28 PM    <DIR>          ..
+10/07/2017  02:28 PM                 0 filey
+10/07/2017  02:28 PM                 0 filey2
+10/07/2017  02:28 PM                 0 filey3.html
+10/07/2017  02:26 PM    <DIR>          folder
+10/07/2017  01:11 PM             2,175 HTML Exercise Form.html
+10/07/2017  10:11 AM               861 HTML Exercise Indentation.html
+10/07/2017  01:54 PM             7,101 Pigeons.html
+               6 File(s)         10,137 bytes
+               3 Dir(s)  139,377,258,496 bytes free
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>move filey/folder
+The system cannot find the path specified.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>Move C:\Users\Valociraptor\Coding Stu
+ff filey C:\Users\Valociraptor\Desktop\Coding Stuff\folder filey
+The syntax of the command is incorrect.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>Move C:\Users\Valociraptor\Coding Stu
+ff filey C:\Users\Valociraptor\Desktop\Coding Stuff\folder
+The syntax of the command is incorrect.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor\Desktop\Coding Stuff
+
+10/07/2017  02:28 PM    <DIR>          .
+10/07/2017  02:28 PM    <DIR>          ..
+10/07/2017  02:28 PM                 0 filey
+10/07/2017  02:28 PM                 0 filey2
+10/07/2017  02:28 PM                 0 filey3.html
+10/07/2017  02:26 PM    <DIR>          folder
+10/07/2017  01:11 PM             2,175 HTML Exercise Form.html
+10/07/2017  10:11 AM               861 HTML Exercise Indentation.html
+10/07/2017  01:54 PM             7,101 Pigeons.html
+               6 File(s)         10,137 bytes
+               3 Dir(s)  139,376,316,416 bytes free
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>ren filey SUPERLUX
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor\Desktop\Coding Stuff
+
+10/07/2017  02:31 PM    <DIR>          .
+10/07/2017  02:31 PM    <DIR>          ..
+10/07/2017  02:28 PM                 0 filey2
+10/07/2017  02:28 PM                 0 filey3.html
+10/07/2017  02:26 PM    <DIR>          folder
+10/07/2017  01:11 PM             2,175 HTML Exercise Form.html
+10/07/2017  10:11 AM               861 HTML Exercise Indentation.html
+10/07/2017  01:54 PM             7,101 Pigeons.html
+10/07/2017  02:28 PM                 0 SUPERLUX
+               6 File(s)         10,137 bytes
+               3 Dir(s)  139,376,316,416 bytes free
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>start .
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>rd test
+The system cannot find the file specified.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>md test
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>cd test
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\test>copy nul index.html
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\test>copy nul style.css
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\test>copy nul commands.txt
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\test>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor\Desktop\Coding Stuff\test
+
+10/07/2017  02:37 PM    <DIR>          .
+10/07/2017  02:37 PM    <DIR>          ..
+10/07/2017  02:37 PM                 0 commands.txt
+10/07/2017  02:37 PM                 0 index.html
+10/07/2017  02:37 PM                 0 style.css
+               3 File(s)              0 bytes
+               2 Dir(s)  139,376,181,248 bytes free
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\test>cd ..
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>md destination
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor\Desktop\Coding Stuff
+
+10/07/2017  02:37 PM    <DIR>          .
+10/07/2017  02:37 PM    <DIR>          ..
+10/07/2017  02:37 PM    <DIR>          destination
+10/07/2017  01:11 PM             2,175 HTML Exercise Form.html
+10/07/2017  10:11 AM               861 HTML Exercise Indentation.html
+10/07/2017  01:54 PM             7,101 Pigeons.html
+10/07/2017  02:37 PM    <DIR>          test
+               3 File(s)         10,137 bytes
+               4 Dir(s)  139,376,181,248 bytes free
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>cd test
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\test>del index.html
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\test>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor\Desktop\Coding Stuff\test
+
+10/07/2017  02:38 PM    <DIR>          .
+10/07/2017  02:38 PM    <DIR>          ..
+10/07/2017  02:37 PM                 0 commands.txt
+10/07/2017  02:37 PM                 0 style.css
+               2 File(s)              0 bytes
+               2 Dir(s)  139,376,181,248 bytes free
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\test>copy style.css style.css2
+        1 file(s) copied.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\test>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor\Desktop\Coding Stuff\test
+
+10/07/2017  02:39 PM    <DIR>          .
+10/07/2017  02:39 PM    <DIR>          ..
+10/07/2017  02:37 PM                 0 commands.txt
+10/07/2017  02:37 PM                 0 style.css
+10/07/2017  02:37 PM                 0 style.css2
+               3 File(s)              0 bytes
+               2 Dir(s)  139,376,181,248 bytes free
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\test>move C:\Users\Valociraptor\Deskt
+op\Coding Stuff\test\style.css2 C:\Users\Valociraptor\Desktop\Coding Stuff\test\
+destination\style.css2
+The syntax of the command is incorrect.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\test>cd destination
+The system cannot find the path specified.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\test>move C:\Users\Valociraptor\Deskt
+op\Coding Stuff\test\style.css2 C:\Users\Valociraptor\Desktop\Coding Stuff\desti
+nation\style.css2
+The syntax of the command is incorrect.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\test>. start
+'.' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\test>.
+'.' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\test>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor\Desktop\Coding Stuff\test
+
+10/07/2017  02:39 PM    <DIR>          .
+10/07/2017  02:39 PM    <DIR>          ..
+10/07/2017  02:37 PM                 0 commands.txt
+10/07/2017  02:37 PM                 0 style.css
+10/07/2017  02:37 PM                 0 style.css2
+               3 File(s)              0 bytes
+               2 Dir(s)  139,376,185,344 bytes free
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\test>..
+'..' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff\test>cd ..
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor\Desktop\Coding Stuff
+
+10/07/2017  02:37 PM    <DIR>          .
+10/07/2017  02:37 PM    <DIR>          ..
+10/07/2017  02:37 PM    <DIR>          destination
+10/07/2017  01:11 PM             2,175 HTML Exercise Form.html
+10/07/2017  10:11 AM               861 HTML Exercise Indentation.html
+10/07/2017  01:54 PM             7,101 Pigeons.html
+10/07/2017  02:39 PM    <DIR>          test
+               3 File(s)         10,137 bytes
+               4 Dir(s)  139,376,185,344 bytes free
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>/s destination
+'/s' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>rd /s destination
+destination, Are you sure (Y/N)? y
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor\Desktop\Coding Stuff
+
+10/07/2017  02:45 PM    <DIR>          .
+10/07/2017  02:45 PM    <DIR>          ..
+10/07/2017  01:11 PM             2,175 HTML Exercise Form.html
+10/07/2017  10:11 AM               861 HTML Exercise Indentation.html
+10/07/2017  01:54 PM             7,101 Pigeons.html
+10/07/2017  02:39 PM    <DIR>          test
+               3 File(s)         10,137 bytes
+               3 Dir(s)  139,376,181,248 bytes free
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>

@@ -1,0 +1,59 @@
+C:\Users\Valociraptor>cd desktop
+
+C:\Users\Valociraptor\Desktop>cd coding stuff
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 581C-8826
+
+ Directory of C:\Users\Valociraptor\Desktop\Coding Stuff
+
+10/07/2017  03:48 PM    <DIR>          .
+10/07/2017  03:48 PM    <DIR>          ..
+10/07/2017  03:52 PM               225 aboutMe.txt
+10/07/2017  02:50 PM    <DIR>          DojoAssignments
+10/07/2017  01:11 PM             2,175 HTML Exercise Form.html
+10/07/2017  10:11 AM               861 HTML Exercise Indentation.html
+10/07/2017  01:54 PM             7,101 Pigeons.html
+10/07/2017  02:57 PM            10,112 Terminal Assignment.txt
+10/07/2017  02:47 PM            11,597 Terminal Exercise.txt
+10/07/2017  03:01 PM            68,472 Terminus SS.PNG
+               7 File(s)        100,543 bytes
+               3 Dir(s)  139,621,568,512 bytes free
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>git log
+commit aae4cf99cb31986b933bab9f9b68aea63eb5dc24 (HEAD -> master, origin/master)
+Author: Val <giordv@amazon.com>
+Date:   Sat Oct 7 15:54:14 2017 -0700
+
+    Improvements
+
+commit ccf496811c33e4ebedbfb8dffc3c1cfc225e2c68
+Author: Val <giordv@amazon.com>
+Date:   Sat Oct 7 15:50:32 2017 -0700
+
+    aboutMe.txt added
+
+commit 669428f123038c448d50c2143b26cf66c4384260
+Author: Val <giordv@amazon.com>
+Date:   Sat Oct 7 15:31:18 2017 -0700
+
+    Just gittin done I guess
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>git revert -n aae4cf9
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>git commit -m "reverting some stuff"
+[master c988efe] reverting some stuff
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>git push
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 279 bytes | 279.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Valociraptor/HTML.git
+   aae4cf9..c988efe  master -> master
+
+C:\Users\Valociraptor\Desktop\Coding Stuff>
