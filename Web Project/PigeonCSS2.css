@@ -63,6 +63,9 @@ img{
     border:5px solid black; 
     border-radius:5px;
 }
+ul{
+    list-style-type: none;
+}
 #important{
     font-size:200%;
     background-color:#424246;
@@ -81,7 +84,8 @@ img{
     width: 15%;
     margin: 5px auto;
     padding: 8px;
-    float: left;
+    display: inline-block;
+    position: fixed;
 }
 #everything{
     float: right;
