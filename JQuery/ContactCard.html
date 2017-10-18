@@ -21,6 +21,7 @@
             
             $("#right").append('<div class="ContactCard"><h2>'+firstname+'</h2><h3>'+phone+'</h3><h4>'+"Click For Description!"+'</h4><p>'+description+'</p></div>')
             $('p').hide();
+            $('h4').show();
             
             return false;
 
@@ -35,13 +36,21 @@
 
             $(document).on("click", "h4", function(){
                     $(this).siblings('p').toggle();
-                    $(this).siblings('h4').toggle();
 
             })
 
+            $(document).on("click", "h4", function(){
+                    $(this).hide();
+
+            })
+
+
             $(document).on("click", "p", function(){
-                $(this).siblings('p').toggle();
                 $(this).siblings('h4').toggle();
+            })
+
+            $(document).on("click", "p", function(){
+                $(this).hide();
             })
 
 
@@ -50,7 +59,7 @@
 </head>
 
 <body>
-
+    <div id="container">
     <div id="left">
         <h1>Enter Your Info Here</h1>
         <form id="form1">
@@ -70,6 +79,7 @@
             <p>Here is an example description of what you might see in someone's contact card :)</p>
         </div>
     </div>
+</div>
 </body>
 
 </html>
