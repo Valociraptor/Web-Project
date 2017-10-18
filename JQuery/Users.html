@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src=jquery-3.2.1.min.js></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function (){
+
+        $("#form1").submit(function(){
+            var firstname = $('input[name="firstname"]').val();
+            var lastname = $('input[name="lastname"]').val();
+            var email = $('input[name="email"]').val();
+            var phone = $('input[name="phone"]').val();
+
+            $('tbody').append("<tr><td>"+firstname+"</td><td>"+lastname+"</td><td>"+email+"</td><td>"+phone+"</td></tr>");
+            return false;
+
+        })
+
+
+
+    });
+
+
+    </script>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>Contact#</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Val</td>
+                <td>TheMagnificent</td>
+                <td>Val@Val.com</td>
+                <td>123-456-7890</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form id="form1" action="process.php" method="post">
+            <input type="text" name="firstname" placeholder="First Name">First Name</input>
+            <input type="text" name="lastname" placeholder="Last Name">Last Name</input>
+            <input type="email" name="email" placeholder ="Email">Email</input>
+            <input type="text" name="phone" placeholder="123-456-7890">Phone</input>
+            <input type="submit" value="SUBMIT TO MY WILL">
+    </form>
+</body>
+</html>
+
+

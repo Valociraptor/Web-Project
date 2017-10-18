@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bleh</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src=jquery-3.2.1.min.js></script>
+    
+    <script type="text/javascript">
+
+        function attach_handlers(){
+            $('.dynamicbutton').click(function(){
+                alert('You clicked me!!!!!!!!5');
+            })
+        }
+        
+        $(document).ready(function (){
+
+            attach_handlers();
+
+            console.log("The page is ready");
+
+            $("h4").click(function(){
+                alert("STOP YOU ARE LEAVING THE PAGE!!");
+            })
+
+            // effects methods below
+
+            $('#hide').click (function(){
+                $('p').hide();
+            })
+
+            $('#show').click (function(){
+                $('p').show();
+            })
+
+            $('p').hide();
+       
+
+            // //manipulation methods below (add/change either text or html to your document)
+
+            $('h3').hover(function(){
+            $('h2').text("THIS ARE ChANGING OMG");
+            });
+
+            $('.append').click(function(){
+                $('.result').append('<h1>I AM APPENDING THINGS</h1>');
+            })
+
+            $('button').click(function(){
+                $('button').css('background-color', 'teal');
+            })
+
+            $('#toggle').click(function(){
+                $(".togglep").toggle();
+            })
+
+            $('#slide').click(function(){
+                $(".slide").slideDown('slow');
+     
+            })
+            $('#picture').click(function(){
+                $('.slideup').slideUp('slow');
+            })
+
+            $('#fadein').click(function(){
+                $(".fadeIn").fadeIn('slow');
+            })
+
+            $('#fadepicture').click(function(){
+                $(".fadeout").fadeOut('slow');
+            })
+
+            $('.classbutton').click(function(){
+                $('#addclassdiv').addClass("bgcolor");
+            })
+
+            $(".beforebutton").click(function(){
+                $("button").before("#");
+            })
+
+            $(".afterbutton").click(function(){
+                $("button").after("@");
+            })
+
+            $(".htmlbutton").click(function(){
+                $("#toggle").html("<b>INSTEAD<b>");
+                console.log("done");
+            })
+
+            $(".attrbutton").click(function(){
+                $("#adclassdiv").val();
+                console.log("done");
+            })
+
+            $(".flipper").click(function(){
+				$(this).attr('temp', $(this).attr('src'));
+				$(this).attr('src', $(this).attr('alt-src'));
+				$(this).attr('alt-src', $(this).attr('temp'));
+            })
+
+
+
+
+
+            $('body').on('click', ".dynamicbutton", function(){
+                alert("Successful Alert");
+                $(".dynamic").append("<button class='dynamicbutton'>New Button</button>");
+                attach_handlers();
+
+            })
+
+            $('#form1').submit(function(){
+                console.log($(this).serialize());
+                return false;
+
+            })
+        
+            $('#traversing').children('p').css('background-color', 'green');
+
+
+  })
+
+
+
+    </script>
+</head>
+<body>
+    <h4>TEEEEEEEST</h4>
+    <a href="http://google.com">lemee out!!!</a>
+    <p>This is an innocent paragraph </p>
+    <a href="">BANANA HAMMOCK!</a>
+    <p>BURNINATE THE PEASANTS! BURNINATE THE PEASANTS BURNINATE THE PEASANTS! BURNINATE THE PEASANTS BURNINATE THE PEASANTS! BURNINATE THE PEASANTS BURNINATE THE PEASANTS! BURNINATE THE PEASANTS BURNINATE THE PEASANTS! BURNINATE THE PEASANTS BURNINATE THE PEASANTS! BURNINATE THE PEASANTS BURNINATE THE PEASANTS! BURNINATE THE PEASANTS BURNINATE THE PEASANTS! BURNINATE THE PEASANTS BURNINATE THE PEASANTS! BURNINATE THE PEASANTS BURNINATE THE PEASANTS! BURNINATE THE PEASANTS BURNINATE THE PEASANTS! BURNINATE THE PEASANTS BURNINATE THE PEASANTS! BURNINATE THE PEASANTS BURNINATE THE PEASANTS! BURNINATE THE PEASANTS  </p>
+    <button id="hide">I HATE WORDS GO AWAY!</button>
+    <button  id="show">BRING BACK THOSE WORDS</button>
+    <button class="append">CICK HERE FOR AN H1</button>
+
+    <h2>This is an H2 heading okay</h2>
+    <h3>This is an h3 heading right now</h3>
+    <div class="result"></div>
+
+    <div id="toggle">
+        <p class="togglep">Click this P to toggle.</p>
+        <p>This p should stay visible when clicked, the other should disappear.</p>
+    </div>
+
+    <button id="slide">SLIDED DOWN!</button>
+
+        <p class="slide">Sliiiiiiided</p>
+    <button id="picture">Slod UP</button>
+        <img class="slideup" src="https://img.buzzfeed.com/buzzfeed-static/static/2014-04/enhanced/webdr02/3/11/anigif_enhanced-1546-1396538568-8.gif" height="100">
+    
+    <button id="fadein">Fade In?</button>   
+    <p class="fadeIn">THIS SHOULD FADE IN</p>
+
+
+    <button id="fadepicture">FADE OUT</button>
+    <img class="fadeout" src="https://media.giphy.com/media/Vi4MRwWi9sYpi/giphy.gif" height="100">
+
+    <div id="addclassdiv">
+        <button class="classbutton">Click to add a color change class</button>
+        <h4>This is what's supposed to change color</h4>
+        <h4><span>This</span> is an data/text <span>test.</span></h4>
+    </div>
+    <script>
+            $( "div" ).data( "test", { first: 16, last: "pizza!" } );
+            $( "span:first" ).text( $( "div" ).data( "test" ).first );
+            $( "span:last" ).text( $( "div" ).data( "test" ).last );
+    </script>
+
+    <button class="beforebutton">Click here to tweet buttons</button>
+    <button class="afterbutton">Click here to AT buttons</button>
+    <button class="htmlbutton">Click here to get html</button>
+    <button class="attrbutton">Pink?</button>
+
+    <div id="flippy">
+        <h4>This section is for the image flip area.</h4>
+        <img class="flipper" src="https://img.buzzfeed.com/buzzfeed-static/static/2014-04/enhanced/webdr02/3/11/anigif_enhanced-1546-1396538568-8.gif" alt-src="https://media.giphy.com/media/Vi4MRwWi9sYpi/giphy.gif" temp=""> 
+    
+    </div>
+
+    <div class="dynamic">
+        <h4>The buttons below load with the page</h4>
+        <button class='dynamicbutton'>Click for Alert</button>
+        <button class='dynamicbutton'>Also Click to add new Button!</button>
+        <h4>The buttons below have been dynamically generated.</h4>
+        <p></p>
+    </div>
+
+
+    <form id="form1" action="process.php" method="post">
+        <input type="text" name="firstname" placeholder="First Name">First Name</input>
+        <input type="text" name="lastname" placeholder="Last Name">Last Name</input>
+        <input type="email" name="email" placeholder ="Email">Email</input>
+        <input type="submit" value="SUBMIT TO MY WILL">
+    </form>
+
+    <div id="traversing">
+        <p> This is a paragraph.</p>
+        <h4>Header 1</h4>
+        <h4>Header 2</h4>
+        <h4>Header 3</h4>
+    </div>
+
+    
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Card</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src=jquery-3.2.1.min.js></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+            $("#form1").submit(function(){
+            var firstname = $('input[name="firstname"]').val();
+            var lastname = $('input[name="lastname"]').val();
+            var description = $('textarea[name="description"]').val();
+            var phone = $('input[name="phone"]').val();
+            
+            $("#right").append('<div class="ContactCard"><h2>'+firstname+'</h2><h3>'+phone+'</h3><h4>'+"Click For Description!"+'</h4><p>'+description+'</p></div>')
+            $('p').hide();
+            
+            return false;
+
+            })
+
+            $('p').hide();
+
+            $(document).on("append", "p",function(){
+                $('p').hide();
+            })
+
+
+            $(document).on("click", "h4", function(){
+                    $(this).siblings('p').toggle();
+                    $(this).siblings('h4').toggle();
+
+            })
+
+            $(document).on("click", "p", function(){
+                $(this).siblings('p').toggle();
+                $(this).siblings('h4').toggle();
+            })
+
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="left">
+        <h1>Enter Your Info Here</h1>
+        <form id="form1">
+            First Name<input type="text" name="firstname" placeholder="First Name"> Last Name<input type="text" name="lastname"
+                placeholder="Last Name"> Phone Number<input type="text" name="phone" placeholder="1234567890"> Description
+            <textarea type="text" name="description" placeholder="A little about yourself!"></textarea>
+            <input type="submit" value="Add Contact Card">
+        </form>
+    </div>
+
+    <div id="right">
+        <h1>Contacts</h1>
+        <div class="ContactCard">
+            <h2>FirstName LastName</h2>
+            <h3>PhoneNumber</h3>
+            <h4>Click For Description!</h4>
+            <p>Here is an example description of what you might see in someone's contact card :)</p>
+        </div>
+    </div>
+</body>
+
+</html>
