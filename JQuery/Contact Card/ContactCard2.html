@@ -11,8 +11,6 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-
-
             $("#form1").submit(function(){
             var firstname = $('input[name="firstname"]').val();
             var lastname = $('input[name="lastname"]').val();
@@ -24,36 +22,23 @@
             $('h4').show();
             
             return false;
-
             })
-
             $('p').hide();
-
             $(document).on("append", "p",function(){
                 $('p').hide();
             })
-
-
             $(document).on("click", "h4", function(){
                     $(this).siblings('p').toggle();
-
             })
-
             $(document).on("click", "h4", function(){
                     $(this).hide();
-
             })
-
-
             $(document).on("click", "p", function(){
                 $(this).siblings('h4').toggle();
             })
-
             $(document).on("click", "p", function(){
                 $(this).hide();
             })
-
-
         });
     </script>
 </head>
@@ -68,15 +53,16 @@
             <textarea type="text" name="description" placeholder="A little about yourself!"></textarea>
             <input type="submit" value="Add Contact Card">
         </form>
+        <img id="patrick" src="patrick.jpg">
     </div>
 
     <div id="right">
         <h1>Contacts</h1>
         <div class="ContactCard">
-            <h2>FirstName LastName</h2>
-            <h3>PhoneNumber</h3>
+            <h2>Patrick Bateman</h2>
+            <h3>1-800-4Dorsia</h3>
             <h4>Click For Description!</h4>
-            <p>Here is an example description of what you might see in someone's contact card :)</p>
+            <p>That's bone. And the lettering is something called Silian Grail...Look at that subtle colouring. The tasteful thickness. Oh my God. It even has a watermark.</p>
         </div>
     </div>
 </div>
