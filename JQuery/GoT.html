@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game of Thrones</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src=jquery-3.2.1.min.js></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function (){
+
+
+    //Start baratheon
+            $('#15').click(function(e){
+
+                $('.child').siblings('div').hide();
+
+
+
+
+                 $.get("https://anapioficeandfire.com/api/houses/?pageSize=99", function(barth){
+                     console.log(barth);
+                     console.log(barth[15].name);
+
+                     var html1="<div class='child'><h2>";
+                        html1 += barth[15].name+"</h2>";
+                        html1 += "<h3>Location: ";
+                        html1 += barth[15].region;
+                        html1 += "<h3>"
+
+                        html1 += "<h3>Founded: ";
+                        html1 += barth[15].founded;
+                        html1 += "<h3></div>"
+
+
+                     $('#info').append(html1);
+            
+                 }, 'json');
+            })
+// End Baratheon
+//Start Targaryen
+
+                 $('#27').click(function(e){
+
+                $('.child').siblings('div').hide();
+
+
+
+
+                 $.get("https://anapioficeandfire.com/api/houses/?pageSize=99&page=8", function(targ){
+                     console.log(targ);
+                     console.log(targ[27].name);
+
+                     var html1="<div class='child'><h2>";
+                        html1 += targ[27].name+"</h2>";
+                        html1 += "<h3>Location: ";
+                        html1 += targ[27].region;
+                        html1 += "<h3>"
+
+                        html1 += "<h3>Words: ";
+                        html1 += targ[27].words;
+                        html1 += "<h3></div>"
+
+
+                     $('#info').append(html1);
+            
+                 }, 'json');
+
+          })
+//end targaryen
+
+//start stark
+$('#11').click(function(e){
+
+                $('.child').siblings('div').hide();
+
+
+
+
+                 $.get("https://anapioficeandfire.com/api/houses/?pageSize=99&page=8", function(stark){
+                     console.log(stark);
+                     console.log(stark[11].name);
+
+                     var html1="<div class='child'><h2>";
+                        html1 += stark[11].name+"</h2>";
+                        html1 += "<h3>Location: ";
+                        html1 += stark[11].region;
+                        html1 += "<h3>"
+
+                        html1 += "<h3>Words: ";
+                        html1 += stark[11].words;
+                        html1 += "<h3></div>"
+
+
+                     $('#info').append(html1);
+            
+                 }, 'json');
+
+          })
+
+    //end stark
+
+    //begin lannister
+
+
+    $('#28').click(function(e){
+
+                $('.child').siblings('div').hide();
+
+
+                 $.get("https://anapioficeandfire.com/api/houses/?pageSize=99&page=5", function(lan){
+                     console.log(lan);
+                     console.log(lan[28].name);
+
+                     var html1="<div class='child'><h2>";
+                        html1 += lan[28].name+"</h2>";
+                        html1 += "<h3>Location: ";
+                        html1 += lan[28].region;
+                        html1 += "<h3>"
+
+                        html1 += "<h3>Words: ";
+                        html1 += lan[28].words;
+                        html1 += "<h3></div>"
+
+
+                     $('#info').append(html1);
+            
+                 }, 'json');
+
+          })
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+
+        <div class="house">
+            <h2>House Stark</h2>
+            <img id="11" src="stark.jpg">
+        </div>
+
+        <div class="house">
+            <h2>House Targaryen</h2>
+            <img id="27" src="targaryen.jpg">
+        </div>
+
+        <div class="house">
+            <h2>House Lannister</h2>
+            <img id="28" src="lannister.jpg">
+        </div>
+
+        <div class="house">
+            <h2>House Baratheon</h2>
+            <img id="15" src="baratheon.png">
+        </div>
+
+        <div id="info">
+            <h1>House Info</h1>
+            <div class="child">
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,82 +1,51 @@
-body{
-	font-family: arial;
-}
-
-#left{
-	background-color: #F4DCF5;
-	width: 49%;
+.house{
 	display: inline-block;
-	text-align: center;
-	border: 4px solid black;
-	border-radius: 4px;
-}
-
-#right{
-	background-color: #E5F5DC;
-	width: 49%;
-	display: inline-block;
-	text-align: center;
+	width: 425px;
+	border: 2px solid black;
 	vertical-align: top;
-	border: 4px solid black;
-	border-radius: 4px;
-	margin-bottom: 5px;
-}
-
-#form1{
-	width: 40%;
-	border: 2px solid grey;
-	border-radius: 5px;
-	margin: 20px auto;
 	padding: 10px;
-
-}
-
-input{
-	display: block;
-	margin-bottom: 10px;
-	padding: 2px;
-	margin: auto;
-}
-
-textarea{
-	display: block;
-	margin: auto;
-	padding-right: 25px;
-	padding-bottom: 15px;
-}
-
-h1{
-	display: inline-block;
-	padding: 5px;
-	border: 1px solid black;
-	text-shadow: 2px 2px 5px #574545;
-	border-radius: 4px
+	background-color: #CECBCB;
 }
 
 h2{
-	text-shadow: 1px 1px 3px #574545;
-}
-
-h3{
-	text-shadow: 1px 1px 3px #574545;
-}
-
-p{
-	padding: 1px;
-	border: 3px ridge #F8F8F8;
-}
-
-.ContactCard{
-	border: 5px solid grey;
-	border-radius: 4px;
-	width: 350px;
-	height: 200px;
-	margin: 20px auto;
+	margin: 0px auto;
+	text-align: center;
 	padding: 5px;
 }
 
-#container{
-	background-color: #F4DCF5;
-	height: 3000px;
-	padding: 10px;
+img{
+	width: 300px;
+	height: 175px;
+	margin: auto;
+	display: block;
 }
+
+#info{
+	display: block;
+	width: 700px;
+	border: 2px solid black;
+	vertical-align: top;
+	margin: 25px auto;
+	background-color: #CECBCB;
+}
+
+h1{
+	margin: 0px auto;
+	text-align: center;
+	padding: 5px;
+}
+
+h3{
+		margin: 0px auto;
+		text-align: center;
+		padding: 5px;
+}
+
+#container{
+	background-color: grey;
+}
+
+body{
+	background-color: grey;
+}
+	

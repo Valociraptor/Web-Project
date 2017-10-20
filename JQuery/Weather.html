@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src=jquery-3.2.1.min.js></script>
+    
+    <script type="text/javascript">
+    // API KEY: 3874a039438257c2a49fe4dff38ef61e
+
+        $(document).ready(function (){
+
+            $("form").submit(function(e){
+
+
+                var idd = $('input[name="forminput"]').val();
+                var apiurl = "http://api.openweathermap.org/data/2.5/weather?q="+idd+"&&appid=3874a039438257c2a49fe4dff38ef61e";
+
+                $.get(apiurl, function(weather){
+                    console.log(weather);
+
+                    var temp = Math.round([weather.main.temp - 273]*1.8+32);
+
+                    var temperature = "<h2>";
+                    temperature +=    'The temperature in ';
+                    temperature +=     weather.name;
+                    temperature +=     ' is ';
+                    temperature +=     temp;
+                    temperature +=     ' degrees right now.';
+                    temperature +=    "</h2>";
+                    $('body').append(temperature);
+
+
+                }, 'json');
+
+                return false;
+            })
+    });
+
+
+    </script>
+</head>
+<body>
+        <form>
+            City or Zip Code:<input type="text" name="forminput" placeholder="City">
+            <input type="submit" value="submit">
+        </form>
+
+        
+</body>
+</html>

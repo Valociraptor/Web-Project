@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src=jquery-3.2.1.min.js></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function (){
+            
+
+            $("form").submit(function(e){
+
+
+                var idd = $('input[name="forminput"]').val();
+                var apiurl = "https://pokeapi.co/api/v2/pokemon/"+idd;
+
+                $.get(apiurl, function(pokemon){
+                    console.log(pokemon);
+                    console.log(pokemon.stats[0].base_stat);
+                    console.log(pokemon.sprites.front_default);
+                    var html_str = "<tr>";
+                    html_str +=    "<td>"+pokemon.id+"</td>";
+                    html_str +=    "<td>"+pokemon.name+"</td>";
+                    html_str +=    "<td>"+pokemon.height+"</td>";
+                    html_str +=    "<td>"+pokemon.weight+"</td>";
+                    html_str +=    "<td><img src='"+pokemon.sprites.front_shiny+"'></td>";
+                    html_str += "</tr>";
+                    $('tbody').append(html_str);
+            
+                }, 'json');
+
+                return false;
+
+        })
+
+        for(i = 1; i < 152; i++){
+            $('body').append(`<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${i}.png">`) 
+        }
+
+
+    });
+
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <h2>Input the pokemon ID you would like to view</h2>
+        <form>
+            <input type="text" name="forminput" placeholder="#">
+            <input type="submit" value="submit">
+        </form>
+
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Sprite</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+</body>
+</html>
