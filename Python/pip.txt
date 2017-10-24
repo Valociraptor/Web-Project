@@ -1,0 +1,7 @@
+-Pip searches, downloads, and installs the relevant packages
+-the comman 'pip list' lists all modules currently installed
+-If you try to install something already installed, pip will alert you to this
+-pip freeze seems to list just setup tools and anything not included with the initial install
+-Doing 'pip freeze > requirements.txt' prints the results of the pip freeze command to a new file stored in the active directory
+-Pip will also uninstall modules for you, will list files then prompt (y/n) to proceed with uninstallation
+-Search command seems to list modules pertaining to your search criteria
