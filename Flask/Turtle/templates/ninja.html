@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    {%if image == "red"%}
+        <img src="{{url_for('static', filename='img/raphael.jpg')}}"> 
+
+
+    {%elif image == "blue"%}
+        <img src="{{url_for('static', filename='img/leonardo.jpg')}}"> 
+
+
+    {%elif image == "orange"%}
+        <img src="{{url_for('static', filename='img/michelangelo.jpg')}}"> 
+
+
+    {%elif image == "purple"%}
+        <img src="{{url_for('static', filename='img/donatello.jpg')}}"> 
+
+
+    {%elif image == null%}
+        <img src="{{url_for('static', filename='img/tmnt.png')}}"> 
+
+
+    {%else%}
+        <img src="{{url_for('static', filename='img/notapril.png')}}"> 
+    {% endif %}
+
+
+</body>
+</html>

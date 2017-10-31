@@ -16,6 +16,23 @@ function SLL(){ //class definition of SLL
         return false;
     }
 
+
+    this.avg = function(){
+        var current = this.head;
+        var avg = this.head.value;
+        counter = 0
+        while(current){
+            if(max < current.next.value){
+                max += current.next.value;
+            }
+     
+            current = current.next
+            counter++;
+        }
+
+        return avg/counter;
+    }
+
 //-----------------------------------------
 
 

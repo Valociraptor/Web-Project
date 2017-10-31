@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript" src="{{url_for('static', filename='jquery-3.2.1.min.js')}}"></script>
+    <!-- <script type="text/javascript">
+
+        $(document).ready(function (){
+
+            $('#farm').submit (function(){
+                $('body').append("Test");
+            })
+
+            $('#house').submit (function(){
+                $('body').append("Test");
+            })
+
+            $('#cave').submit (function(){
+                $('body').append("Test");
+            })
+
+            $('#casino').submit (function(){
+                $('body').append("Test");
+            })
+
+
+
+        })
+    
+    </script> -->
+</head>
+<body>
+    <h2>Your money: {{session['money']}}</h2>
+    <form id="farm" action="/process_money" method="post">
+        Farm
+        <input type="hidden" name="building" value="farm" />
+        <input type="submit" value="Find Gold!"/>
+    </form>
+
+
+    <form id="house" action="/process_money" method="post">
+        House
+        <input type="hidden" name="building" value="house" />
+        <input type="submit" value="Find Gold!"/>
+    </form>
+
+    <form id="cave" action="/process_money" method="post">
+        Cave
+        <input type="hidden" name="building" value="cave" />
+        <input type="submit" value="Find Gold!"/>
+    </form>
+
+
+    <form id="casino" action="/process_money" method="post">
+        Casino
+        <input type="hidden" name="building" value="casino" />
+        <input type="submit" value="Find Gold!"/>
+    </form>
+
+    <h2>Activity</h2>
+    {%if 'activity' in session%}
+        <h4>{{session['activity']}}</h4>
+    {%endif%}
+
+
+</body>
+</html>
