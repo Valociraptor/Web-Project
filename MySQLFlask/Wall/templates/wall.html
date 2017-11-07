@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to THE WALL!</h1>
+    <h3>Submit a new post:</h3>
+    <form action='/post' method="POST">
+    Post a message:<br>
+    <textarea name="message"></textarea>
+    <br>
+    <input type="submit" value="POSTIT">
+    </form>
+    <br>
+ 
+
+    <h2>Previous Messages</h2>
+    <hr>
+    {% for message in messages %}
+        <h3>Posted by {{message['name']}} On {{message['date']}}:</h3>
+        <p>Post# {{message['id']}}</p>
+        <p>{{message['message']}}</p>
+        <br>
+        <h4>Comments on this post:</h4>
+        <ul>
+        {% for comment in comments%}
+            {%if comment['message_id'] == message['id']%}
+                <li>{{comment['comment']}}  <i>--{{comment['commenter']}} at {{comment['created_at']}}</i></li>
+                
+            {%endif%}
+        {%endfor%}
+        </ul>
+        <form action='/comment', method="POST">
+            Post a comment:
+            <textarea name="comment"></textarea>
+            <input type="hidden" name="messageid" value="{{message['id']}}">
+            <input type="submit" value="Add Comment">
+        </form>
+        <hr>
+    {% endfor %}
+        
+</body>
+</html>

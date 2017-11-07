@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/create/" method='POST'>
+        {% csrf_token %}
+        Your Name: <input type="text" name="name"><br>
+        Dojo Location <select name="location">
+            <option value="Here">Here</option>
+            <option value="There">There</option>
+            <option value="Everywhere">Everywhere</option>
+        </select><br>
+        Language <select name="language">
+            <option value="Love">Love</option>
+            <option value="Morse Code">Morse Code</option>
+            <option value="Painful Screaming">Painful Screaming</option>
+        </select><br>
+        Comment<textarea name="comment"></textarea><br>
+        <input type="submit" value="Submit"><br>
+    </form>
+</body>
+</html>
