@@ -1,0 +1,86 @@
+ cd ..
+(DJANGO~1)
+giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime (master)
+$ python manage.py makemigrations
+Migrations for 'user_login':
+  apps\user_login\migrations\0001_initial.py
+    - Create model User
+(DJANGO~1)
+giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime (master)
+$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions, user_login
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying sessions.0001_initial... OK
+  Applying user_login.0001_initial... OK
+(DJANGO~1)
+giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime (master)
+$ python manage.py shell
+Python 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 20:25:58) [MSC v.1500 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from apps.user_login.models import *
+>>> User.objects.create(first_name="Val", last_name="TheMagnificent", email="Val@val.com", age=5000)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\base.py", line 590, in __repr__
+    u = six.text_type(self)
+  File "C:\Users\giordv\Desktop\Coding Stuff\Django\Usertime\apps\user_login\models.py", line 17, in __str__
+    return self.first_name +  ' ' + self.last_name
+NameError: global name 'self' is not defined
+>>> exit()
+
+KeyboardInterrupt
+>>>
+
+KeyboardInterrupt
+>>> exit
+Use exit() or Ctrl-Z plus Return to exit
+>>> exit()
+(DJANGO~1)
+giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime (master)
+$ python manage.py makemigrations
+No changes detected
+(DJANGO~1)
+giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime (master)
+$ python manage.py shell
+Python 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 20:25:58) [MSC v.1500 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from apps.user_login.models import *
+>>> User.objects.create(first_name="Val", last_name="TheMagnificent", email="Val@val.com", age=5000)
+<User: Val TheMagnificent>
+>>> User.objects.create(first_name="Bee", last_name="Bee", email="bees@bees.com", age=50)
+<User: Bee Bee>
+>>> all_users=Blogs.objects.all
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Blogs' is not defined
+>>> all_users=User.objects.all()
+>>> all_users
+<QuerySet [<User: Val TheMagnificent>, <User: Val TheMagnificent>, <User: Bee Bee>]>
+>>> bee=User.objects.last()
+>>> bee
+<User: Bee Bee>
+>>> User.objects.count()
+3
+>>> bee.first_name=Mr
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Mr' is not defined
+>>> bee.first_name="Mr."
+>>> bee
+<User: Mr. Bee>
+>>>

@@ -1,0 +1,148 @@
+ (urls.W001) Your URL pattern '^$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
+?: (urls.W001) Your URL pattern '^book_authors$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
+?: (urls.W001) Your URL pattern '^dojoninjas$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
+No changes detected
+(DJANGO~1)
+giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime (master)
+$ python manage.py migrate
+System check identified some issues:
+
+WARNINGS:
+?: (urls.W001) Your URL pattern '^$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
+?: (urls.W001) Your URL pattern '^book_authors$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
+?: (urls.W001) Your URL pattern '^dojoninjas$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
+Operations to perform:
+  Apply all migrations: DojoNinjas, admin, auth, book_authors, contenttypes, sessions, user_login
+Running migrations:
+  No migrations to apply.
+(DJANGO~1)
+giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime (master)
+$ python manage.py shell
+Python 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 20:25:58) [MSC v.1500 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from apps.book_authors.models import *
+>>> Book.objects.all()
+<QuerySet [<Book: Jurassic Park>, <Book: Blaaaarhj>, <Book: Beees>, <Book: What>, <Book: SCOOOOT>]>
+>>> Author.objects.create(first_name="Mike", last_name="Mikels" email="eeeeeemails")
+  File "<console>", line 1
+    Author.objects.create(first_name="Mike", last_name="Mikels" email="eeeeeemails")
+                                                                    ^
+SyntaxError: invalid syntax
+>>> Author.objects.create(first_name="Mike", last_name="Mikels", email="eeeeeemails")
+<Author: Mike Mikels>
+>>> Author.objects.create(first_name="Speros", last_name="Spears", email="butterymales")
+<Author: Speros Spears>
+>>> Author.objects.create(first_name="John", last_name="Johny", email="sjkdfhkjsdfhsdjkf")
+<Author: John Johny>
+>>> (first_name="4", last_name="Four", email="sjkdfhkjsdfhsdjkf")
+  File "<console>", line 1
+    (first_name="4", last_name="Four", email="sjkdfhkjsdfhsdjkf")
+               ^
+SyntaxError: invalid syntax
+>>> Author.objects.create(first_name="4", last_name="Four", email="sjkdfhkjsdfhsdjkf")
+<Author: 4 Four>
+>>> Author.objects.create(first_name="5", last_name="Five", email="sjkdfhkjsdfhsdjkf")
+<Author: 5 Five>
+>>> Author.objects.all()
+<QuerySet [<Author: Mike Mikels>, <Author: Speros Spears>, <Author: John Johny>, <Author: 4 Four>, <Author: 5 Five>]>
+>>> book5=Authors.objects.get(id=5)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Authors' is not defined
+>>> book5=Author.objects.get(id=5)
+>>> book5
+<Author: 5 Five>
+>>> book5.first_name="FIIIIIVE"
+>>> book5.save()
+>>> book5
+<Author: FIIIIIVE Five>
+>>> book1=Book.objects.get(id=1)
+>>> book1
+<Book: Jurassic Park>
+>>> book2=Book.objects.get(id=2)
+>>> book2
+<Book: Blaaaarhj>
+>>> book1.authors
+<django.db.models.fields.related_descriptors.ManyRelatedManager object at 0x0000000003B81F98>
+>>> book1.authors=Author.objects.get(id=1)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\fields\related_descriptors.py", line 537, in __set__
+    manager.set(value)
+  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\fields\related_descriptors.py", line 983, in set
+    objs = tuple(objs)
+TypeError: 'Author' object is not iterable
+>>> author1=Author.objects.get(id=1)
+>>> author1
+<Author: Mike Mikels>
+>>> author2=Author.objects.get(id=2)
+>>> author2
+<Author: Speros Spears>
+>>> author3=Author.objects.get(id=3)
+>>> author3
+<Author: John Johny>
+>>> author4=Author.objects.get(id=4)
+>>> author4
+<Author: 4 Four>
+>>> author5=Author.objects.get(id=5)
+>>> author5
+<Author: FIIIIIVE Five>
+>>> book1.authors.add(author1)
+>>> author1
+<Author: Mike Mikels>
+>>> author1.book
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Author' object has no attribute 'book'
+>>> book1.authors
+<django.db.models.fields.related_descriptors.ManyRelatedManager object at 0x0000000003C22400>
+>>> author1.books
+<django.db.models.fields.related_descriptors.ManyRelatedManager object at 0x0000000003B81F98>
+>>> book2.authors.add(author1)
+>>> author1
+<Author: Mike Mikels>
+>>> author1.authors
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Author' object has no attribute 'authors'
+>>> author1.books.all()
+<QuerySet [<Book: Jurassic Park>, <Book: Blaaaarhj>]>
+>>> book1.authors
+<django.db.models.fields.related_descriptors.ManyRelatedManager object at 0x0000000003B81F98>
+>>> book1.authors.all()
+<QuerySet [<Author: Mike Mikels>]>
+>>> book1.authors.add(author2)
+>>> book2.authors.add(author2)
+>>> author2.books.add(book3)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'book3' is not defined
+>>> book3
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'book3' is not defined
+>>> book3=Book.objects.get(id=3)
+>>> author2.books.add(book3)
+>>> author2.books.all()
+<QuerySet [<Book: Jurassic Park>, <Book: Blaaaarhj>, <Book: Beees>]>
+>>> book1.authors.all()
+<QuerySet [<Author: Mike Mikels>, <Author: Speros Spears>]>
+>>> author3.books.add(book1, book2, book3, book4)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'book4' is not defined
+>>> book4=Book.objects.get(id=4)
+>>> book5=Book.objects.get(id=5)
+>>> author3.books.add(book1, book2, book3, book4)
+>>> author3.books.all()
+<QuerySet [<Book: Jurassic Park>, <Book: Blaaaarhj>, <Book: Beees>, <Book: What>]>
+>>> author4.books.add(book1, book2, book3, book4, book5)
+>>> author.books.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'author' is not defined
+>>> author4.books.all()
+<QuerySet [<Book: Jurassic Park>, <Book: Blaaaarhj>, <Book: Beees>, <Book: What>, <Book: SCOOOOT>]>
+>>> book5.authors.all()
+<QuerySet [<Author: 4 Four>]>
