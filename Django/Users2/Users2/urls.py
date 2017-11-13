@@ -18,4 +18,6 @@ from django.conf.urls import url, include
 
 urlpatterns = [
     url(r'^users/', include('apps.users.urls')),
+    url(r'^courses/', include('apps.courses.urls')),
+    url(r'^login/', include('apps.login.urls')),
 ]

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome, {{user.alias}}!</h1>
+
+    <h2>Recent Book Reviews</h2>
+        {% for review in reviews reversed %}
+            <h3><a href="books/{{review.bookid}}">{{book.title}}</a></h3>
+            <h4>Rating:  {% load static %}<img src="{% static "books/{{review.rating}}.png" %}" width="100"> </h4>
+            <h4><a href="users/{{review.reviewer}}">{{reviewer.alias}}</a> says: {{review.review}}</h4>
+            <h4>Posted on: {{review.created_on}}</h4>
+        {% endfor %}
+
+    <h2>Other Books with Reviews:</h2>
+        {% for book in books %}
+            <h3><a href="/books{{book.id}}">{{book.title}}</a></h3>
+        {% endfor %}
+
+    <h3><a href="add/">Add Book and Review</a>  <a href="logout/">Logout</a></h3>
+</body>
+</html>

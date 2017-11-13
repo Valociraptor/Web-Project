@@ -65,6 +65,8 @@ function SLL() { //class definition of SLL
             listy += current.value+" => ";
             current = current.next;
         }
+
+        
         return listy;
     }
 
@@ -161,21 +163,49 @@ function SLL() { //class definition of SLL
             node.next = temp;
         }
     }
+
+    this.hasLoop = function (){
+
+        walker = this.head;
+        runner = this.head.next;
+        while(runner.next != null){
+            while( walker != runner){
+                walker = walker.next;
+                runner = runner.next.next;
+            }
+
+            return true;
+        }
+        return false;
+
+    }
+
 }
 
 function Node(val) { // class definition for Node
     this.value = val; // value is a property and val is the incoming value we want to set this.value to
-    this.next = null; // next pointer is null as we don't assume the node have a buddy yet
+    this.next = null; // next pointer is null as we don't assume the node have a buddy yet *null
 }
 
 var mySLL = new SLL();
-mySLL.AddFront("Dojo");
-mySLL.AddFront("Amazon");
-mySLL.AddFront("Weeeeee");
+var node1 = new Node(1)
+var node2 = new Node(2)
+var node3 = new Node(3)
+var node4 = new Node(4)
+var node5 = new Node(5)
+
+
+
+mySLL.head = node1
+node1.next = node2
+node2.next = node3
+node3.next = node4
+node4.next = node5
+
 //console.log(mySLL.removeFront());
 
 //console.log(mySLL.Length());
-console.log(mySLL.Display());
-console.log(mySLL.RemoveTodd("Dojo"));
-console.log(mySLL.RemoveTodd("Jayme"));
-console.log(mySLL.Display());
+ console.log(mySLL.hasLoop());
+
+
+// console.log(isFinite(mySLL.Length()));
