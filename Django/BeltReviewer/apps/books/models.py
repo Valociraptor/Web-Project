@@ -66,18 +66,42 @@ class UserManager(models.Manager):
 class BookManager(models.Manager):
     def validate(self, POST):
         errors = []
+        if len(POST['author']) > 0:
+            finalauthor = POST['author']
+        else:
+            finalauthor = POST['existingauthor']
+
         try:
             new_book = Book.objects.get(title = POST['title'])
         except:
             new_book = Book.objects.create(
                 title = POST['title'],
-                author = POST['author']
+                author = finalauthor
+            )
+           
+
+            new_review = Review.objects.create(
+                review = POST['review'],
+                rating = POST['rating'],
+                userid = User.objects.get(id=POST['userid']),
+                bookid = new_book
             )
         
             return (True, new_book)
         errors.append("This book already exists in the database!")
         return (False, errors)
 
+
+
+class ReviewManager(models.Manager):
+    def makereview(self, POST):
+        new_review = Review.objects.create(
+            review = POST['review'],
+            rating = POST['rating'],
+            userid = User.objects.get(id=POST['userid']),
+            bookid = Book.objects.get(id=POST['bookid'])
+        )    
+        return(new_review)
 
 
 
@@ -104,7 +128,7 @@ class Book(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    objects = BookManager
+    objects = BookManager()
 
     def __str__(self):
         return self.title
@@ -118,6 +142,8 @@ class Review(models.Model):
     bookid = models.ForeignKey(Book, related_name="bookreviews")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    objects = ReviewManager()
 
     def __str__(self):
         return self.rating

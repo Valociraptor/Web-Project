@@ -1,373 +1,49 @@
-Type "help", "copyright", "credits" or "license" for more information.
-(InteractiveConsole)
->>> from apps.book_authors.models import *
->>> apps.book_authors.all()
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-NameError: name 'apps' is not defined
->>> Author.objects.all()
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-NameError: name 'Author' is not defined
->>> User.objects.all()
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\query.py", line 226, in __repr__
-    data = list(self[:REPR_OUTPUT_SIZE + 1])
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\query.py", line 250, in __iter__
-    self._fetch_all()
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\query.py", line 1118, in _fetch_all
-    self._result_cache = list(self._iterable_class(self))
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\query.py", line 53, in __iter__
-    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\sql\compiler.py", line 894, in execute_sql
-    raise original_exception
-OperationalError: no such table: book_authors_user
->>> user1 = User.objects.create(name="Val")
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\query.py", line 394, in create
-    obj.save(force_insert=True, using=self.db)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\base.py", line 808, in save
-    force_update=force_update, update_fields=update_fields)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\base.py", line 838, in save_base
-    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\base.py", line 924, in _save_table
-    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\base.py", line 963, in _do_insert
-    using=using, raw=raw)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\query.py", line 1076, in _insert
-    return query.get_compiler(using=using).execute_sql(return_id)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\sql\compiler.py", line 1107, in execute_sql
-    cursor.execute(sql, params)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\backends\utils.py", line 80, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\backends\utils.py", line 65, in execute
-    return self.cursor.execute(sql, params)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\utils.py", line 94, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\backends\utils.py", line 65, in execute
-    return self.cursor.execute(sql, params)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
-    return Database.Cursor.execute(self, query, params)
-OperationalError: no such table: book_authors_user
->>> exit()
-(DJANGO~1)
-giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime (master)
-$ cd apps/
-(DJANGO~1)
-giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime/apps (master)
-$ python ../manage.py startapp likes
-(DJANGO~1)
-giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime/apps (master)
-$ cd likes/
-(DJANGO~1)
-giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime/apps/likes (master)
-$ touch urls.py
-(DJANGO~1)
-giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime/apps/likes (master)
-$ mkdir templates
-(DJANGO~1)
-giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime/apps/likes (master)
-$ mkdir templates/likes
-(DJANGO~1)
-giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime/apps/likes (master)
-$ touch templates/likes/index.html
-(DJANGO~1)
-giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime/apps/likes (master)
-$ cd ../../../..
-(DJANGO~1)
-giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff (master)
-$ cd Django/
-(DJANGO~1)
-giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django (master)
-$ cd Usertime/
-(DJANGO~1)
-giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime (master)
-$ python manage.py runserver
-Performing system checks...
+f3F3912d
 
-System check identified some issues:
+validations:
+registration:
+-leave out date of birth
+-all other fields present
+-name/alias at least 2 char
+-password at least 8
+-email regular validations
 
-WARNINGS:
-?: (urls.W001) Your URL pattern '^$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
-?: (urls.W001) Your URL pattern '^book_authors$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
-?: (urls.W001) Your URL pattern '^dojoninjas$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
-?: (urls.W001) Your URL pattern '^likes$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
+-no video walkthrough needed
+-submit IP to todd
+----------------------------------
 
-System check identified 4 issues (0 silenced).
-November 09, 2017 - 16:23:32
-Django version 1.11.7, using settings 'Usertime.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CTRL-BREAK.
-[09/Nov/2017 16:23:42] "GET /book_authors HTTP/1.1" 200 298
-[09/Nov/2017 16:23:49] "GET /likes HTTP/1.1" 200 295
-(DJANGO~1)
-giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime (master)
-$ python manage.py makemigrations
-System check identified some issues:
 
-WARNINGS:
-?: (urls.W001) Your URL pattern '^$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
-?: (urls.W001) Your URL pattern '^book_authors$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
-?: (urls.W001) Your URL pattern '^dojoninjas$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
-?: (urls.W001) Your URL pattern '^likes$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
-Migrations for 'likes':
-  apps\likes\migrations\0001_initial.py
-    - Create model Book
-    - Create model User
-    - Add field liked_by to book
-    - Add field uploader to book
-(DJANGO~1)
-giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime (master)
-$ python manage.py migrate
-System check identified some issues:
+18.221.123.142
 
-WARNINGS:
-?: (urls.W001) Your URL pattern '^$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
-?: (urls.W001) Your URL pattern '^book_authors$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
-?: (urls.W001) Your URL pattern '^dojoninjas$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
-?: (urls.W001) Your URL pattern '^likes$' uses include with a regex ending with a '$'. Remove the dollar from the regex to avoid problems including URLs.
-Operations to perform:
-  Apply all migrations: DojoNinjas, admin, auth, book_authors, contenttypes, likes, sessions, user_login
-Running migrations:
-  Applying likes.0001_initial... OK
-(DJANGO~1)
-giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime (master)
-$ python manage.py shell
-Python 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 20:25:58) [MSC v.1500 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license" for more information.
-(InteractiveConsole)
->>> user1 = User.objects.create(name="Val")
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-NameError: name 'User' is not defined
->>> User.objects.create(name="Val)
-  File "<console>", line 1
-    User.objects.create(name="Val)
-                                 ^
-SyntaxError: EOL while scanning string literal
->>> User.objects.create(name="Val")
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-NameError: name 'User' is not defined
->>> from apps.likes.models import *
->>> user1 = User.objects.create(name="Val")
->>> user1
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\base.py", line 590, in __repr__
-    u = six.text_type(self)
-  File "C:\Users\giordv\Desktop\Coding Stuff\Django\Usertime\apps\likes\models.py", line 16, in __str__
-    return self.name+' '+self.last_name
-AttributeError: 'User' object has no attribute 'last_name'
->>> exit()
-(DJANGO~1)
-giordv@PHX115CG71217NS MINGW64 ~/Desktop/Coding Stuff/Django/Usertime (master)
-$ python manage.py shell
-Python 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 20:25:58) [MSC v.1500 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license" for more information.
-(InteractiveConsole)
->>> from apps.likes.models import *
->>> book1
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-NameError: name 'book1' is not defined
->>> user1
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-NameError: name 'user1' is not defined
->>> user1 = User.objects.get(id=1)
->>> user1
-<User: Val>
->>> user2=User.objects.create(name="Bal")
->>> user3=User.objects.create(name="Cal")
->>> book1=Book.objects.create(name="111111111111" desc="one")
-  File "<console>", line 1
-    book1=Book.objects.create(name="111111111111" desc="one")
-                                                     ^
-SyntaxError: invalid syntax
->>> book1=Book.objects.create(name="111111111111", desc="one")
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\query.py", line 394, in create
-    obj.save(force_insert=True, using=self.db)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\base.py", line 808, in save
-    force_update=force_update, update_fields=update_fields)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\base.py", line 838, in save_base
-    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\base.py", line 924, in _save_table
-    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\base.py", line 963, in _do_insert
-    using=using, raw=raw)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\query.py", line 1076, in _insert
-    return query.get_compiler(using=using).execute_sql(return_id)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\sql\compiler.py", line 1107, in execute_sql
-    cursor.execute(sql, params)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\backends\utils.py", line 80, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\backends\utils.py", line 65, in execute
-    return self.cursor.execute(sql, params)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\utils.py", line 94, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\backends\utils.py", line 65, in execute
-    return self.cursor.execute(sql, params)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
-    return Database.Cursor.execute(self, query, params)
-IntegrityError: NOT NULL constraint failed: likes_book.uploader_id
->>> book1=Book.objects.create(name="111111111111" desc="one", uploader=1)
-  File "<console>", line 1
-    book1=Book.objects.create(name="111111111111" desc="one", uploader=1)
-                                                     ^
-SyntaxError: invalid syntax
->>> book1=Book.objects.create(name="111111111111", desc="one", uploader=1)
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\query.py", line 392, in create
-    obj = self.model(**kwargs)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\base.py", line 555, in __init__
-    _setattr(self, field.name, rel_obj)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\fields\related_descriptors.py", line 216, in __set__
-    self.field.remote_field.model._meta.object_name,
-ValueError: Cannot assign "1": "Book.uploader" must be a "User" instance.
->>> book1=Book.objects.create(name="111111111111" desc="one", uploader=User.objects.get(id=1)
-  File "<console>", line 1
-    book1=Book.objects.create(name="111111111111" desc="one", uploader=User.objects.get(id=1)
-                                                     ^
-SyntaxError: invalid syntax
->>> book1=Book.objects.create(name="111111111111", desc="one", uploader=User.objects.get(id=1)
-... book1.uploader
-  File "<console>", line 2
-    book1.uploader
-        ^
-SyntaxError: invalid syntax
->>> book1.uploader.all()
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-NameError: name 'book1' is not defined
->>> book1
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-NameError: name 'book1' is not defined
->>> book1 = Book.objects.create(name="Jurassic Park", desc="wahahhaha")
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\query.py", line 394, in create
-    obj.save(force_insert=True, using=self.db)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\base.py", line 808, in save
-    force_update=force_update, update_fields=update_fields)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\base.py", line 838, in save_base
-    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\base.py", line 924, in _save_table
-    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\base.py", line 963, in _do_insert
-    using=using, raw=raw)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\query.py", line 1076, in _insert
-    return query.get_compiler(using=using).execute_sql(return_id)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\sql\compiler.py", line 1107, in execute_sql
-    cursor.execute(sql, params)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\backends\utils.py", line 80, in execute
-    return super(CursorDebugWrapper, self).execute(sql, params)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\backends\utils.py", line 65, in execute
-    return self.cursor.execute(sql, params)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\utils.py", line 94, in __exit__
-    six.reraise(dj_exc_type, dj_exc_value, traceback)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\backends\utils.py", line 65, in execute
-    return self.cursor.execute(sql, params)
-  File "C:\Users\giordv\Desktop\CODING~1\MYENVI~1\DJANGO~1\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
-    return Database.Cursor.execute(self, query, params)
-IntegrityError: NOT NULL constraint failed: likes_book.uploader_id
->>> book1=Book.objects.create(name="111111111111", desc="one", uploader=User.objects.get(id=1)
-...
-... book1
-  File "<console>", line 3
-    book1
-        ^
-SyntaxError: invalid syntax
->>> book1
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-NameError: name 'book1' is not defined
->>> user1
-<User: Val>
->>> book1 = Book.objects.create(name="Jurassic Park", desc"Life finds a way", uploader=User.objects.get(id=1)
-  File "<console>", line 1
-    book1 = Book.objects.create(name="Jurassic Park", desc"Life finds a way", uploader=User.objects.get(id=1)
-                                                                           ^
-SyntaxError: invalid syntax
->>> book1 = Book.objects.create(name="Jurassic Park", desc="Life finds a way", uploader=User.objects.get(id=1)
-...
-... d
-  File "<console>", line 3
-    d
-    ^
-SyntaxError: invalid syntax
->>> book1 = Book.objects.create(name="Jurassic Park", desc="Life finds a way", uploader=User.objects.get(id=1))
->>> book1
-<Book: Jurassic Park>
->>> book2 = Book.objects.create(name="Euthanasia the Adventure", desc"WEEEEEEEEEEEEEEE", uploader=User.objects.get(id=1))
-  File "<console>", line 1
-    book2 = Book.objects.create(name="Euthanasia the Adventure", desc"WEEEEEEEEEEEEEEE", uploader=User.objects.get(id=1))
-                                                                                      ^
-SyntaxError: invalid syntax
->>> book2 = Book.objects.create(name="Euthanasia the Adventure", desc="WEEEEEEEEEEEEEEE", uploader=User.objects.get(id=1))
->>> book3 = Book.objects.create(name="Scooty", desc="Scoooooooooot", uploader=User.objects.get(id=2))
->>> book3
-<Book: Scooty>
->>> book4 = Book.objects.create(name="Animal Farm", desc="rambalambadingydong", uploader=User.objects.get(id=2))
->>> book5 = Book.objects.create(name="Viron", desc="sdkfhskdfs", uploader=User.objects.get(id=3))
->>> book 5
-  File "<console>", line 1
-    book 5
-         ^
-SyntaxError: invalid syntax
->>> book5
-<Book: Viron>
->>> book6 = Book.objects.create(name="Catfishing", desc="fun for the whole family", uploader=User.objects.get(id=3))
->>> book6
-<Book: Catfishing>
->>> Book.objects.all()
-<QuerySet [<Book: Jurassic Park>, <Book: Euthanasia the Adventure>, <Book: Scooty>, <Book: Animal Farm>, <Book: Viron>, <Book: Catfishing>]>
->>> book1.uploaded_books.all()
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-AttributeError: 'Book' object has no attribute 'uploaded_books'
->>> book1.uploader.all()
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-AttributeError: 'User' object has no attribute 'all'
->>> user1.uploaded_books.all()
-<QuerySet [<Book: Jurassic Park>, <Book: Euthanasia the Adventure>]>
->>> book1.uploader
-<User: Val>
->>> user1.liked_books.add(book6, book1)
->>> user.liked_books.all()
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-NameError: name 'user' is not defined
->>> user1.liked.books.all()
-Traceback (most recent call last):
-  File "<console>", line 1, in <module>
-AttributeError: 'User' object has no attribute 'liked'
->>> user1.liked_books.all()
-<QuerySet [<Book: Jurassic Park>, <Book: Catfishing>]>
->>> user2.liked_books.add(book1, book3)
->>> user2.liked_books.all()
-<QuerySet [<Book: Jurassic Park>, <Book: Scooty>]>
->>> user3.liked_books.add(book1, book2, book3, book4, book5, book6)
->>> user3.liked_books.all()
-<QuerySet [<Book: Jurassic Park>, <Book: Euthanasia the Adventure>, <Book: Scooty>, <Book: Animal Farm>, <Book: Viron>, <Book: Catfishing>]>
+gunicorn --bind 0.0.0.0:8000 Val.wsgi:application
+
+
+
+[Unit]
+Description=gunicorn daemon
+After=network.target
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/Val
+ExecStart=/home/ubuntu/Val/venv/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/Val/Val.sock Val.wsgi:application
+[Install]
+WantedBy=multi-user.target
+
+
+sudo vim /etc/nginx/sites-available/Val
+
+
+
+server {
+  listen 80;
+  server_name 18.221.123.142;
+  location = /favicon.ico { access_log off; log_not_found off; }
+  location /static/ {
+      root /home/ubuntu/Val;
+  }
+  location / {
+      include proxy_params;
+      proxy_pass http://unix:/home/ubuntu/Val/Val.sock;
+  }
+}

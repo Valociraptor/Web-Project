@@ -14,20 +14,23 @@
     <h3>Reviews:</h3>
     {%for review in reviews%}
         <hr>       
-        <p>Rating: {% load static %}<img src="{% static "books/{{review.rating}}.png" %}" width="100"> </p>
-        <p>{{user.alias}} says:<br> 
+        <p>Rating: <img src="/static/books/{{review.rating}}.png" width="100"> </p>
+        <p>{{review.userid.alias}} says:<br> 
             {{review.review}}</p>
-        <p>{{review.created_on}}</p>
+        <p>{{review.created_at}}</p>
 
         {% if review.reviewer == request.post.id%}
-            <p><a href="books/destroy/{{review.id}}">Delete your review</a></p>
+            <p><a href="/destroy/{{review.id}}">Delete your review</a></p>
         {% endif %}
     {% endfor %}
 
     <h2>Add your own review:</h2>
+    <form action="/newreview/" method="POST">
     {% csrf_token %}
         <input type="hidden" name="title" value="{{book.title}}"></p>
         <input type="hidden" name="author" value="{{book.author}}"></p>
+        <input type="hidden" name="bookid" value="{{book.id}}">
+        <input type="hidden" name="userid" value="{{request.session.id}}">
         <p>Review:<textarea name="review"></textarea></p>
         <p>Rating: <select name="rating">
             <option value="1">1</option>
@@ -37,6 +40,8 @@
             <option value="5">5</option>
         </select></p>
         <p><input type="submit" value="Submit Review"></p>
+    </form>
     <h3><a href="/books">Home</a> <a href="/logout">Logout</a></h3>
+    
 </body>
 </html>

@@ -4,6 +4,20 @@ function SLL(){ //class definition of SLL
 
 
 //-----------------------------------
+    this.rlength = function(pointer, counter){
+        if (pointer.next == null){
+            return counter;
+        }
+        pointer = pointer.next;
+        counter += 1;
+
+        return (mySLL.rlength(pointer, counter));
+    }
+
+
+
+    
+
     this.contains = function(val){
         var current = this.head;
         while(current){
@@ -72,10 +86,14 @@ function Node(val){ // class definition for Node
     this.next = null; // next pointer is null as we don't assume the node have a buddy yet
 }
 
+
+
 var mySLL = new SLL();
 mySLL.AddFront("Dojo");
 mySLL.AddFront("Amazon");
-console.log(mySLL.removeFront());
+mySLL.AddFront("Woot");
+mySLL.AddFront("blarg");
 
 
-console.log(mySLL);
+
+console.log(mySLL.rlength(mySLL.head, 1));

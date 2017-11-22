@@ -8,12 +8,17 @@
 </head>
 <body>
     <h1>Add a new Book Title and a Review:</h1>
+    {% if messages %}
+        {% for message in messages %}
+            <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
 
-    <form action="books/create/" method='POST'>
+    <form action="/create/" method="POST">
         {% csrf_token %}
         <p>Title:<input type="text" name="title"></p>
         <p>Author:</p>
-        <p>Choose from the list: <select name="author">
+        <p>Choose from the list: <select name="existingauthor">
             {% for book in books%}
             <option value="{{book.author}}">{{book.author}}</option>
             {%endfor%}</p>
@@ -27,6 +32,7 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select></p>
+        <input type="hidden" name="userid" value="{{request.session.id}}">
         <p><input type="submit" value="Add Book and Review"></p>
     </form>
 </body>

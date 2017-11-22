@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome {{user.alias}}!</h1>
+    <p><a href="/logout">Logout</a></p>
+    <br>
+    <h1>Quoteable Quotes</h1>
+    <hr>
+    <hr>
+    {% for quote in quotes%}
+    <h3>{{quote.by}}: {{quote.quote}}</h3>
+    <p></p><i></p>Posted by <a href="users/{{quote.uploader.id}}">{{quote.uploader.alias}}</a></i></p>
+    <form action="/favorite/" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="id" value="{{request.session.id}}">
+        <input type="hidden" name="qid" value="{{quote.id}}">
+        <input type="submit" value="Add to My List">
+    </form>
+    <hr>
+    {% endfor %}
+    <br>
+    <br>
+    <br>
+    <h1>Your Favorites</h1>
+    <hr>
+    <hr>
+    {% for fav in favorites%}
+    <h3>{{fav.by}}: {{fav.quote}}</h3>
+    <p></p><i></p>Posted by <a href="users/{{fav.uploader.id}}">{{fav.uploader.alias}}</a></i></p>
+    <form action="/removefav/" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="id" value="{{request.session.id}}">
+        <input type="hidden" name="qid" value="{{fav.id}}">
+        <input type="submit" value="Remove from My List">
+    </form>
+    <hr>
+    {% endfor %}
+    <br>
+    <h1>Contribute a Quote</h1>
+    {% if messages %}
+        {% for message in messages %}
+            <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+    <form action="/create/" method="POST">
+        {% csrf_token %}
+        <p>Quoted By: <input type="text" name="by"></p>
+        <p>Message: <textarea name="quote"></textarea></p>
+        <input type="hidden" name="uploader" value="{{request.session.id}}">
+        <input type="submit" value="Submit">
+    </form>
+
+
+
+
+
+</body>
+</html>
