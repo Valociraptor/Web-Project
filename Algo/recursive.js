@@ -20,14 +20,33 @@
 
 // console.log(fibby(3));
 
-function factorial(fact){
-    if (fact <= 1){
-        return fact;
+// function factorial(fact){
+//     if (fact <= 1){
+//         return fact;
+//     }
+//     //console.log(fact);
+//     return fact * factorial(fact-1);
+// }
+
+// console.log(factorial(6));
+
+
+function subsets(str, arr){
+
+    if (str.length == 1){
+        return arr;
     }
-    //console.log(fact);
-    return fact * factorial(fact-1);
+
+
+      
+    arr.push(str);
+    str.length -= 1;
+
+
+
+    return subsets(str[str.length]);
 }
 
-console.log(factorial(6));
+console.log(subsets("abc", []));
 
 

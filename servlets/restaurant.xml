@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8">
+
+<fullMenu>
+    <menu category="breakfast">
+        <item category="entree">
+            <name>Waffles</name>
+            <desc>Best Waffles in the universe</desc>
+            <price>5.00$</price>
+        </item>
+        <item category ="side">
+            <name>Cereal</name>
+            <desc>Mediocre cereal</desc>
+            <price>5.00$</price>        
+        </item>
+    </menu>
+    <menu category="dinner">
+        <item category="entree">
+            <name>Steak</name>
+            <desc>Best steak in the universe</desc>
+            <price>5.00$</price>
+        </item>
+        <item category ="side">
+            <name>Potatoes</name>
+            <desc>Fluffy</desc>
+            <price>5.00$</price>        
+        </item>       
+    </menu>
