@@ -1,0 +1,31 @@
+.projects {
+	display: inline-block;
+	width: 20%;
+	border: 3px solid gray;
+	border-radius: 3px;
+}
+
+.projects h2{
+	text-align: center;
+}
+
+h1{
+	color: purple;
+}
+
+h2 {
+	color: green;
+	text-align: center;
+}
+
+body {
+	background-color: black;
+}
+
+a{
+	color: gray;
+}
+
+p {
+	color: gray;
+}

@@ -96,28 +96,64 @@ function BST(){
         
         }
         return false;
+    }
+
+
+
+    
+
+
+
+    this.heights = function(node=this.root){
+        if (!node){ 
+            return 0; 
+        }
+        var left = this.heights(node.left);
+        var right = this.heights(node.right);
+        if (left >= right) { 
+            return 1 + left; 
+        }
+        return 1 + right;
+    }
+
+
+    
+
 }
-}
+
 
 
 myTree = new BST();
 
 var a = new BTNode(0);
+
 var b = new BTNode(1);
 var c = new BTNode(2);
+var x = new BTNode(3);
 var d = new BTNode(-1);
 var e = new BTNode(-2);
+var y = new BTNode(-3);
+var z = new BTNode(-4);
+
+
+
+
 
 myTree.root = a;
 a.right = b;
 b.right = c;
 a.left = d;
 d.left = e;
+e.left = y;
+y.left = z;
+c.right = x;
 
-console.log(myTree.add(3));
-console.log(myTree.min());
-console.log(myTree.max());
-console.log(myTree.isEmpty());
-console.log(myTree.contains(5));
+
+
+console.log(myTree.heights());
+
+
+
+
 
 
