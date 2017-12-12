@@ -95,7 +95,7 @@ function quickSort(arr, start=0, end=arr.length){
 
 }
 
-quickSort(arr1);
+
 console.log(arr1);
 
 

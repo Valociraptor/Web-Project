@@ -97,3 +97,4 @@ mySLL.AddFront("blarg");
 
 
 console.log(mySLL.rlength(mySLL.head, 1));
+
