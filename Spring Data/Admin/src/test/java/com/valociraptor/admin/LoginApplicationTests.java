@@ -1,4 +1,4 @@
-package com.valociraptor.login;
+package com.valociraptor.admin;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

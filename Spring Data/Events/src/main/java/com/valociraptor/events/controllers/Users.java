@@ -1,6 +1,6 @@
 package com.valociraptor.events.controllers;
 
-import java.security.Principal;
+
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -36,18 +36,12 @@ public class Users {
         if(logout != null) {
             model.addAttribute("logoutMessage", "Logout Successfull!");
         }        
-    	
+        model.addAttribute("states", userService.states());
     	return "registrationPage.jsp";
     }
     
-    @RequestMapping("/events")
-    public String home(Principal principal, Model model) {
-        // 1
-        String username = principal.getName();
-        model.addAttribute("currentUser", userService.findByUsername(username));
-        return "eventDashboard.jsp";
-    }
     
+
     @PostMapping("/registration")
     public String registration(@Valid @ModelAttribute("user") User user, BindingResult result, Model model, HttpSession session) {
         if (result.hasErrors()) {
@@ -55,6 +49,7 @@ public class Users {
             return "registrationPage.jsp";
         }
         userService.saveWithUserRole(user);
+        model.addAttribute("errorMessage", "Registration Successful!  Please log in below.");
 
         return "redirect:/";
     }

@@ -9,6 +9,33 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<h1><c:out value="${event.name}"/></h1>
+	
+	<h3>Edit Event</h3>
+	<p><form:errors path="event.*"/></p>
+	    <form:form method="POST" action="/events/${event.id}/edit" modelAttribute="event">
+        <p>
+            <form:label path="name">Name:</form:label>
+            <form:input path="name" value="${event.name}"/>
+        </p>
+         <p>
+            <form:label path="date">Date:</form:label>
+            <form:input type="date" path="date" value="${event.date}"/>
+        </p>             
+        
+         <p>
+            <form:label path="location">Location:</form:label>
+            <form:input path="location" value="${event.location}"/>
+            
+         <form:select path="state" value="${event.state}">
+			<c:forEach items="${states}" var="state">
+				<form:option value="${state}" label="${state}" />
+			</c:forEach>
+         </form:select>           
+        </p>              
+        <form:hidden path="id" value="${id}"></form:hidden>
+        <form:hidden path="user" value="${currentUser.id}"></form:hidden>
+        <input type="submit" value="Update!"/>
+    </form:form>
 </body>
 </html>

@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.valociraptor.login</groupId>
-	<artifactId>Login</artifactId>
+	<groupId>com.valociraptor.events</groupId>
+	<artifactId>Events</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
-	<name>Login</name>
+	<name>Events</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>

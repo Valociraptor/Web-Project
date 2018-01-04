@@ -43,7 +43,7 @@ public class Event {
 	// Many to One relationship for  creator of event
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id")
-    private User eventHost;
+    private User user;
     
 	//many to many relationship for events attended by users
     @ManyToMany(fetch =FetchType.LAZY)
@@ -63,18 +63,15 @@ public class Event {
     	
     }
     
-    
-    
-	public User getEventHost() {
-		return eventHost;
+
+	public User getUser() {
+		return user;
 	}
 
 
-
-	public void setEventHost(User eventHost) {
-		this.eventHost = eventHost;
+	public void setUser(User user) {
+		this.user = user;
 	}
-
 
 
 	public List<User> getAttendees() {

@@ -27,39 +27,104 @@
     		<th>Action/Status</th>
     	</tr>
     	
-    	<tr>
-    		<c:forEach items="${stateEvents}" var="event">
-    			<td><a href="/events/${event.id}"><c:out value="${event.name}"/></a></td>
-    			<td><fmt:formatDate value="${event.date} type="both pattern="MMMMM d', 'YYYY"></fmt:formatDate></td>
-    			<td><c:out value="${event.location}"/></td>
-    			<td><c:out value="${event.host.name}"/></td>	
-    			<td>
-	    			<c:if test="${event.host == to currentUser}">
-	    				<a href="events/${event.id}/edit">Edit</a>   <a href="events/${event.id}/delete">Delete</a>
+   		<c:forEach items="${stateEvents}" var="event">
+   		   	<tr>
+	   			<td><a href="/events/${event.id}"><c:out value="${event.name}"/></a></td>
+	   			<td><fmt:formatDate value="${event.date}" type="both" pattern="MMMMM d', 'YYYY"></fmt:formatDate></td>
+	   			<td><c:out value="${event.location}"/></td>
+	   			<td><c:out value="${event.user.firstName}"/></td>	
+	   			<td>
+	    			<c:if test="${event.user == currentUser}">
+	    				<a href="/events/${event.id}/edit">Edit</a>   <a href="events/${event.id}/delete">Delete</a>
 	    			</c:if>
 	    			
-	    			<c:if test="${event.host != to currentUser}">
-		    			 <c:forEach items="${event.attendees} var="attendee">
-		    			 	<c:if test="${attendee != to currentUser}">
-		    			 		<c:set var="attending" value=false/>
+	    			<c:if test="${event.user != currentUser}">
+	    			
+		    			 <c:forEach items="${event.attendees}" var="attendee">			 
+		    			 	<c:if test="${attendee == currentUser}">
+		    			 		Attending! <a href="/events/${event.id}/cancel">Cancel</a>
+								<c:set var="attending" value="True"/>
 		    			 	</c:if>
-		    			 </c:forEach>
-	    			 
-		    			 <c:choose>
-		    			 	<c:when test="${attending = false}">
-		    					<a href="events/${event.id}/join">Join</a> 
-		    				</c:when>
-		    				
-		    				<c:otherwise>
-		    					Attending! <a href="events/${event.id}/cancel">Cancel</a> 
-		    				</c:otherwise>
-	    				</c:choose>
+		    			 </c:forEach>		
+		    			 
+	    			 	<c:if test="${attending != 'True'}">
+							<a href="/events/${event.id}/join">Join</a>
+	    			 	</c:if>		    			 
+		
 	    			</c:if>
-    			</td>  			
-    		</c:forEach>
-    	</tr>
+	   			</td>  		
+   			</tr>	
+   		</c:forEach>	
     </table>
+   
+    <h3>Here are some out of state events: </h3>
+    <table>
+    	<tr>
+    		<th>Name</th>
+    		<th>Date</th>
+    		<th>Location</th>
+    		<th>Host</th>
+    		<th>Action/Status</th>
+    	</tr>
+    	
+    	<c:forEach items="${nonStateEvents}" var="event">
+    		<tr>
+    			<td><a href="/events/${event.id}"><c:out value="${event.name}"/></a></td>
+    			<td><fmt:formatDate value="${event.date}" type="both" pattern="MMMMM d', 'YYYY"></fmt:formatDate></td>
+    			<td><c:out value="${event.location}"/></td>
+    			<td><c:out value="${event.user.firstName}"/></td>	
+    			<td>
+	    			<c:if test="${event.user == currentUser}">
+	    				<a href="/events/${event.id}/edit">Edit</a>   <a href="events/${event.id}/delete">Delete</a>
+	    			</c:if>
+	    			
+	    				 <c:if test="${event.user != currentUser}">
+	    					<c:set var="attending" value="False"/>
+			    			 <c:forEach items="${event.attendees}" var="attendee">			 
+			    			 	<c:if test="${attendee == currentUser}">
+			    			 		Attending! <a href="/events/${event.id}/cancel">Cancel</a>
+									<c:set var="attending" value="True"/>
+			    			 	</c:if>
+			    			 </c:forEach>		
+		    			 
+		    			 	<c:if test="${attending != 'True'}">
+								<a href="/events/${event.id}/join">Join</a>
+		    			 	</c:if>		    			 
+ 							<c:set var="attending" value="False"/>
+	    			</c:if>
+    			</td>  		
+    		</tr>	
+    	</c:forEach>
+    	
+    </table>    
+   
+    <h2>Create a new event</h2>
+        <p><form:errors path="event.*"/></p>
     
+    <form:form method="POST" action="/events/new" modelAttribute="event">
+        <p>
+            <form:label path="name">Name:</form:label>
+            <form:input path="name"/>
+        </p>
+         <p>
+            <form:label path="date">Date:</form:label>
+            <form:input type="date" path="date"/>
+        </p>             
+        
+         <p>
+            <form:label path="location">Location:</form:label>
+            <form:input path="location"/>
+            
+         <form:select path="state">
+			<c:forEach items="${states}" var="state">
+				<form:option value="${state}" label="${state}" />
+			</c:forEach>
+         </form:select>           
+        </p>              
+        
+        <form:hidden path="user" value="${currentUser.id}"></form:hidden>
+        <input type="submit" value="Create!"/>
+    </form:form> 
     
 </body>
 </html>

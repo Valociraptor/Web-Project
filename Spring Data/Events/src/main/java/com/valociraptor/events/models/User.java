@@ -53,7 +53,7 @@ public class User {
     private List<Role> roles;
     
     //one to many for creator relationship with events
-    @OneToMany(mappedBy="user, fetch= FetchType.LAZY")
+    @OneToMany(mappedBy="user", fetch= FetchType.LAZY)
     private List<Event> hostedEvents;
     
     

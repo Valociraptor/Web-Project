@@ -55,7 +55,7 @@ public class Users {
             return "registrationPage.jsp";
         }
         userService.saveWithUserRole(user);
-
+        model.addAttribute("errorMessage", "Registration Successful!  Please log in below.");
         return "redirect:/";
     }
     

@@ -1,5 +1,8 @@
 package com.valociraptor.events.services;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -37,5 +40,17 @@ public class UserService {
     public User findByUsername(String username) {
         return userRepo.findByUsername(username);
     }
+    
+    public ArrayList<String> states(){
+    	ArrayList<String> states = new ArrayList<String>();
+    	Collections.addAll(states, "AK","AL","AR","AZ","CA","CO","CT","DC","DE","FL","GA","GU","HI","IA","ID", "IL","IN","KS","KY","LA","MA","MD","ME","MH","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY", "OH","OK","OR","PA","PR","PW","RI","SC","SD","TN","TX","UT","VA","VI","VT","WA","WI","WV","WY");
+    	return states;
+    	
+    }
+
+	public void updateUser(User user) {
+		userRepo.save(user);
+		
+	}
 
 }

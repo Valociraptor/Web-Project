@@ -39,24 +39,26 @@
     <p><form:errors path="user.*"/></p>
     
     <form:form method="POST" action="/registration" modelAttribute="user">
+        
         <p>
-            <form:label path="username">Email:</form:label>
+            <form:label path="name">Name:</form:label>
+            <form:input path="name"/>
+        </p>   
+        <p>
+            <form:label path="username">Alias:</form:label>
             <form:input type="email" path="username"/>
         </p>
+          
          <p>
-            <form:label path="firstName">First Name:</form:label>
-            <form:input path="firstName"/>
-        </p>             
-        
-         <p>
-            <form:label path="lastName">Last Name:</form:label>
-            <form:input path="lastName"/>
+            <form:label path="email">Email:</form:label>
+            <form:input path="email"/>
         </p>              
-        
+         
         <p>
             <form:label path="password">Password:</form:label>
             <form:password path="password"/>
         </p>
+        Password should be at least 8 characters
         <p>
             <form:label path="passwordConfirmation">Password Confirmation:</form:label>
             <form:password path="passwordConfirmation"/>
